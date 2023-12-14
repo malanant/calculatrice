@@ -1,3 +1,3 @@
-# Projet de calculatrice en classe calculatrice
+# Projet de calculatrice en classe
 
 ### https://customtkinter.tomschimansky.com/documentation/widgets/button
