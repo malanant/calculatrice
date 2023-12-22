@@ -6,7 +6,8 @@ from tkinter import messagebox
 customtkinter.set_appearance_mode("System")  # Modes: system (default), light, dark
 customtkinter.set_default_color_theme("green")  # Themes: blue (default), dark-blue, green
 
-tk = customtkinter.CTk()  # create CTk window like you do with the Tk window
+#Je créé la zone de ma calculatrice
+tk = customtkinter.CTk()
 tk.geometry("350x490")
 
 def button_click(nombre):
@@ -34,8 +35,7 @@ def calculEgal():
 texte = customtkinter.CTkEntry(tk, text_color='#FFF', fg_color='#123', width=255, height=60)
 texte.place(x=95, y=10)
 
-
-# Use CTkButton instead of tkinter Button
+#Je créé tous les boutons de ma calculatruce classique
 
 mode = customtkinter.CTkButton(master=tk, text="Mode", width=80, height=60, fg_color="#F875AA", hover_color="#FFC0D9")
 mode.place(x=10, y=10)
@@ -111,9 +111,5 @@ virgule.place(x=180, y=410)
 
 egal = customtkinter.CTkButton(master=tk, text="=", command=calculEgal, width=80, height=60, fg_color="#F875AA", hover_color="#FFC0D9")
 egal.place(x=265, y=410)
-
-tk.mainloop()
-
-
 
 tk.mainloop()
