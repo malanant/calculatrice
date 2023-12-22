@@ -2,4 +2,4 @@
 
 ### https://customtkinter.tomschimansky.com/documentation/widgets/button
 
-## Faire pip3 install customtkinter et pip install packaging
+## NICOLAS L'A FAIT SUR CHATGPT
