@@ -2,4 +2,4 @@
 
 ### https://customtkinter.tomschimansky.com/documentation/widgets/button
 
-## NICOLAS L'A FAIT SUR CHATGPT
+## NICOLAS L'A FAIT LUI MEME
