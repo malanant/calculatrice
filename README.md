@@ -1,3 +1,3 @@
 # Projet de calculatrice en classe
 
-### https://customtkinter.tomschimansky.com/documentation/widgets/button
+### Il vous suffit d'aller sur le dossier dist pour trouver le fichier exécutable !
