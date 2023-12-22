@@ -2,23 +2,24 @@ import customtkinter
 from tkinter import *
 from tkinter import messagebox
 
-
 customtkinter.set_appearance_mode("System")  # Modes: system (default), light, dark
 customtkinter.set_default_color_theme("green")  # Themes: blue (default), dark-blue, green
 
-#Je créé la zone de ma calculatrice
 tk = customtkinter.CTk()
-tk.geometry("350x490")
-
+tk.geometry("350x490") #Je definis une taille pour ma fenetre
+tk.title('Calculatrice') #Je nomme ma fenetre
 def button_click(nombre):
     texte.insert (END, nombre)
 
+#Fonction qui permet de supprimer les chiffres marques
 def clear():
     texte.delete(0, END)
 
+#Fonction qui permet de supprimer le dernier chiffre marque
 def enlever():
     texte.delete(len(texte.get())-1)
 
+#Fonction qui permet de trouver le resultat d'un calcul
 def calculEgal():
     try:
         equation = texte.get()
@@ -31,13 +32,18 @@ def calculEgal():
     except :
         messagebox.showerror('Erreur')
 
+#Fonction pour creer une fenetre en cliquant sur "Mode"
+def create_window():
+    extra_window = Toplevel()
+    extra_window.title('Mode scientifique')
+
 #creation de la zone de texte 
 texte = customtkinter.CTkEntry(tk, text_color='#FFF', fg_color='#123', width=255, height=60)
 texte.place(x=95, y=10)
 
 #Je créé tous les boutons de ma calculatruce classique
 
-mode = customtkinter.CTkButton(master=tk, text="Mode", width=80, height=60, fg_color="#F875AA", hover_color="#FFC0D9")
+mode = customtkinter.CTkButton(master=tk, text="Mode", command= create_window, width=80, height=60, fg_color="#F875AA", hover_color="#FFC0D9")
 mode.place(x=10, y=10)
 
 pourcent = customtkinter.CTkButton(master=tk, text="%", command=lambda: button_click('/100'), width=80, height=60, fg_color="#F875AA", hover_color="#FFC0D9")
@@ -112,4 +118,5 @@ virgule.place(x=180, y=410)
 egal = customtkinter.CTkButton(master=tk, text="=", command=calculEgal, width=80, height=60, fg_color="#F875AA", hover_color="#FFC0D9")
 egal.place(x=265, y=410)
 
+#Le code se lance ici
 tk.mainloop()
